@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
 });
 
 // Create Document Component
-const MyDocument = ({title}) => (
+const MyDocument = ({title, orientation,pageFormat,isBranded}) => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size={pageFormat} style={styles.page} orientation={orientation}>
       {
         Array(100).fill(1).map((e, index) => (
       <View style={styles.section}>
